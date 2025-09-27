@@ -13,7 +13,7 @@ The basic premise is to use data from Kaggle, in this case UK Accident data, to 
 
 The data in question is coming from [this link](https://www.kaggle.com/code/khawlabenghalia/uk-accident) - it should be noted there were multiple data sources for Accident Data.
 
-This readme will be updated as new sections of code, or decisions are added.
+This readme will be updated as new sections of code or decisions are added.
 
 ## Program flow
 
