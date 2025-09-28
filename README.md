@@ -34,3 +34,4 @@ Tuples are used as they are immutable, slightly more memory-efficient (not a hug
   - The GUI needs to be cross-platform
 - Revist the data - depending on the GUI tool the data may need reformatting, it would certainly benefit from aggregating data.
 - At the moment we are looking at file based data - this could be changed to pull the data from Kaggle direct
+- The data is working well as a tuple, Qt is populating dropdowns based on the data - however, we could end up with users selecting data which does not exist. Need to look at cascading drop downs (Year -> Police -> Local Auth - > Search)
