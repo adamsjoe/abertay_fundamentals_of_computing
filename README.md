@@ -27,3 +27,10 @@ graph TD
 At the moment, the script does not do much. It will read the data in, converting each row to a tuple, and then print out a single row, and the line count. The file has **307974** rows, but we print a count of **307973** due to the header row being stripped out.
 
 Tuples are used as they are immutable, slightly more memory-efficient (not a huge concern for this dataset.)
+
+## Future work
+
+- Investigate Python's GUI libraries - this sort of tool would benefit from having a GUI rather a text interface.
+  - The GUI needs to be cross-platform
+- Revist the data - depending on the GUI tool the data may need reformatting, it would certainly benefit from aggregating data.
+- At the moment we are looking at file based data - this could be changed to pull the data from Kaggle direct
