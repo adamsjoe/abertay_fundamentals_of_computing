@@ -77,20 +77,24 @@ class MyWindow(QMainWindow):
         file_menu = menubar.addMenu("File")
         help_menu = menubar.addMenu("Help")
 
+        # Add an exit button - or we can't close this damned thing
         exit_action = QAction("Exit", self)
         exit_action.triggered.connect(self.close)
         file_menu.addAction(exit_action)
 
+        # Add an about - Not sure if this is allowed?
         about_action = QAction("About", self)
         about_action.triggered.connect(self.show_about)
         help_menu.addAction(about_action)
 
+    # Short cut for quitting
     def keyPressEvent(self, event: QKeyEvent):
         if event.key() == Qt.Key.Key_Escape:
             self.close()
         else:
             super().keyPressEvent(event)
 
+    # Cascade the dropdowns
     def on_year_selected(self, year):
         self.police_combo.clear()
         self.police_combo.setEnabled(True)
@@ -136,6 +140,7 @@ class MyWindow(QMainWindow):
         police = self.police_combo.currentText()
         local = self.local_combo.currentText()
 
+        # We could get in the position of a combination which is not valid
         filtered = [
             row for row in self.data
             if row[ACCIDENT_DATE].split("-")[2] == year
